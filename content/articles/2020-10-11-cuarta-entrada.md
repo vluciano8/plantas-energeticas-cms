@@ -6,9 +6,9 @@ date: 2020-10-11T17:42:16.350Z
 dateModified: 2020-10-11T17:42:16.398Z
 description: Esta es la cuarta entrada
 featuredPost: true
-category: Topic 4
+category: Iluminacion
 tags:
-  - Topic 4
+  - Iluminacion
 featuredImage: /images/aloe.jpg
 ---
 Esta es la cuarta entrada

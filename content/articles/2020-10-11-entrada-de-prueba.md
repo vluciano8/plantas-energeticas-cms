@@ -6,9 +6,9 @@ date: 2020-10-11T12:31:24.983Z
 dateModified: 2020-10-11T12:31:25.043Z
 description: Esta es una entrada de prueba
 featuredPost: false
-category: Topic 1
+category: Energia
 tags:
-  - Topic 1
+  - Energia
 featuredImage: /images/hoja.jpg
 ---
 <!--StartFragment-->
