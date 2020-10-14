@@ -31,7 +31,7 @@ class ArticleTemplate extends Component {
         <div id="article">
           <header>
             <h1 className="article-title">{post.frontmatter.title}</h1>
-            <p className="article-date">{post.frontmatter.date}</p>
+            <p className="article-date"><i className="far fa-calendar">{' '}{post.frontmatter.date}</i></p>
             <div className="article-tags">
               {post.frontmatter.tags.map(tag => (
                 <Link
@@ -101,7 +101,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD.MM.YYYY")
         dateModified(formatString: "MMMM DD, YYYY")
         description
         tags

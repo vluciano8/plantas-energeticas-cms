@@ -3,10 +3,13 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import Card from "../components/card"
-import CardSmall from "../components/cardSmall"
+import Sidebar from '../components/sidebar'
 import Layout from "../components/layout"
 
 const TopicPageTemplate = ({ pageContext }) => {
+
+  const { topic } = pageContext
+  
   const data = useStaticQuery(graphql`
     {
       site {
@@ -14,14 +17,14 @@ const TopicPageTemplate = ({ pageContext }) => {
           title
         }
       }
-      allMarkdownRemark {
+      allMarkdownRemark(sort:{fields:frontmatter___date, order:DESC}) {
         edges {
           node {
             fields {
               slug
             }
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "DD.MM.YYYY")
               title
               description
               tags
@@ -55,7 +58,6 @@ const TopicPageTemplate = ({ pageContext }) => {
     }
   `)
 
-  const { topic } = pageContext
   const { edges } = data.allMarkdownRemark
 
   const edgesWithTopic = edges.filter(({ node }) => {
@@ -89,37 +91,7 @@ const TopicPageTemplate = ({ pageContext }) => {
             )
           })}
         </div>
-        <div className="sidebar">
-          <h2 className="sidebar-header">Suscribete</h2>
-          <div className="sidebar-emails">
-            <h2>Newsletter</h2>
-            <p>Recibe nuestras novedades</p>
-            <form>
-              <input type="text" id="email" aria-label="email" />
-              <input
-                type="submit"
-                value="Suscribete"
-                aria-label="subscribe"
-              />{" "}
-            </form>
-
-            <span>Puedes desuscribir cuando quieras</span>
-          </div>
-          <h2 className="sidebar-header">Popular Articles</h2>
-          <div className="sidebar-popular">
-            {data.allMarkdownRemark.edges.map(({ node }, index) => {
-              if (index > 2 && index < 5) {
-                return (
-                  <CardSmall
-                    key={node.fields.slug}
-                    slug={node.fields.slug}
-                    frontmatter={node.frontmatter}
-                  />
-                )
-              } else return null
-            })}
-          </div>
-        </div>
+        <Sidebar />
       </div>
     </Layout>
   )

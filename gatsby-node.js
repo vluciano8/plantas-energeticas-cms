@@ -1,5 +1,6 @@
 const path = require(`path`)
 const _ = require("lodash")
+const {paginate} = require ('gatsby-awesome-pagination');
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
@@ -42,7 +43,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
-      topicsGroup: allMarkdownRemark(limit: 2000) {
+      topicsGroup: allMarkdownRemark(
+        limit: 1000) {
         group(field: frontmatter___category) {
           fieldValue
         }
@@ -80,13 +82,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create Archive Pages
+  // Create Blog Pages
   const postsPerPage = 6
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/archive` : `/archive/${i + 1}`,
-      component: path.resolve("./src/templates/archive-page.js"),
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: path.resolve("./src/templates/blog-page.js"),
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,

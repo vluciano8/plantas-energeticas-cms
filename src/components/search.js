@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "./card"
-import CardSmall from "./cardSmall"
+import Sidebar from "./sidebar"
 
 const Search = ({ markdown, query }) => {
   const blogPosts = markdown.edges
@@ -28,8 +28,8 @@ const Search = ({ markdown, query }) => {
     <div>
       <div>
         <h2 className="page-header">
-          {filteredPosts.length > 0 ? "Search results " : "No results "}
-          for "<strong>{query.replace("%20", " ")}</strong>"
+          {filteredPosts.length > 0 ? "Resultados " : "No hay resultados "}
+          para "<strong>{query.replace("%20", " ")}</strong>"
         </h2>
         <div className="flex-layout">
           <div className="cards">
@@ -44,36 +44,7 @@ const Search = ({ markdown, query }) => {
               )
             })}
           </div>
-          <div className="sidebar">
-            <h2 className="sidebar-header">Mailing List</h2>
-            <div className="sidebar-emails">
-              <h2>Mailing list here</h2>
-              <p>Subscribe to my list for lots of great reasons</p>
-              <form>
-                <input type="text" id="email" aria-label="email" />
-                <input
-                  type="submit"
-                  value="Subscribe"
-                  aria-label="subscribe"
-                />{" "}
-              </form>
-              <span>Weekly updates, unsubscribe at any time</span>
-            </div>
-            <h2 className="sidebar-header">Popular Articles</h2>
-            <div className="sidebar-popular">
-              {markdown.edges.map(({ node }, index) => {
-                if (index > 2 && index < 5) {
-                  return (
-                    <CardSmall
-                      key={node.id}
-                      slug={node.fields.slug}
-                      frontmatter={node.frontmatter}
-                    />
-                  )
-                } else return null
-              })}
-            </div>
-          </div>
+          <Sidebar />
         </div>
       </div>
     </div>

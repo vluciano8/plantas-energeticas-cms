@@ -5,7 +5,7 @@ import { FaAngleDoubleRight } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
-import CardSmall from "../components/cardSmall"
+import Sidebar from '../components/sidebar'
 import Featured from "../components/featured"
 import Search from "../components/search"
 
@@ -25,7 +25,7 @@ const IndexPage = props => {
               slug
             }
             frontmatter {
-              date(formatString: "DD/MM/YYYY")
+              date(formatString: "DD.MM.YYYY")
               title
               description
               category
@@ -79,38 +79,9 @@ const IndexPage = props => {
             
           </div>
 
-          <div className="sidebar">
-            {/* <h2 className="sidebar-header">Suscribete</h2> */}
-            <div className="sidebar-emails">
-              <h2>Newsletter</h2>
-              {/* <p>Recibe nuestras novedades</p> */}
-              <form>
-                <input type="text" id="email" aria-label="email" />
-                <input
-                  type="submit"
-                  value="Suscribete"
-                  aria-label="subscribe"
-                />{" "}
-              </form>
-              <span>Puedes desuscribir cuando quieras</span>
-            </div>
-            <h2 className="sidebar-header">Entradas Populares</h2>
-            <div>
-              {data.allMarkdownRemark.edges.map(({ node }, index) => {
-                if (index > 1 && index < 5) {
-                  return (
-                    <CardSmall
-                      key={node.id}
-                      slug={node.fields.slug}
-                      frontmatter={node.frontmatter}
-                    />
-                  )
-                } else return null
-              })}
-            </div>
-          </div>
+          <Sidebar />
         </div>
-        <Link to="/archive/2" id="archive-link">
+        <Link to="/blog" id="archive-link">
           Mas Entradas
           <FaAngleDoubleRight className="icon-right" />
         </Link>{" "}
