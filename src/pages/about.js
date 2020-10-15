@@ -6,7 +6,8 @@ import SEO from "../components/seo"
 const AboutPage = () => {
   return (
     <Layout>
-      <SEO title="Nosotros" />
+      <SEO title="Nosotros" description="Es una descripcion de nosotros" />
+
       <div id="about">
         <h2>Nosotros</h2>
         <p>Learn how to create and host a website on Github and host it for free using Github Pages. This can be used to host your projects and portfolio websites easily without spending a dime. You can also use this to host personal website on github.

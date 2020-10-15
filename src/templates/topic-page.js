@@ -32,7 +32,7 @@ const TopicPageTemplate = ({ pageContext }) => {
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -48,7 +48,7 @@ const TopicPageTemplate = ({ pageContext }) => {
             image {
               childImageSharp {
                 fluid(maxWidth: 240, maxHeight: 240) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

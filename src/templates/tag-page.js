@@ -30,7 +30,7 @@ function TagPageTemplate({ pageContext }) {
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 400) {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
