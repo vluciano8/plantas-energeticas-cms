@@ -50,8 +50,8 @@ class ArticleTemplate extends Component {
               ))}
             </div>
             <Image
+            className="article-image lazyload"
               fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-              className="article-image"
             ></Image>
           </header>
           <div

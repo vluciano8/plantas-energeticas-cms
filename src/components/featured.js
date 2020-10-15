@@ -17,7 +17,7 @@ const Featured = ({ markdown }) => {
               >
                 <Link to={node.fields.slug}>
                   <div className="featured-overlay"></div>
-                  <Image
+                  <Image className="lazyload"
                     fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                   />
                   <figcaption>
@@ -35,7 +35,7 @@ const Featured = ({ markdown }) => {
               >
                 <Link to={node.fields.slug}>
                   <div className="featured-overlay"></div>
-                  <Image
+                  <Image className="lazyload"
                     fluid={node.frontmatter.featuredImage.childImageSharp.fluid}
                   />
                   <figcaption>

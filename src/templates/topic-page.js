@@ -73,7 +73,7 @@ const TopicPageTemplate = ({ pageContext }) => {
       <div className="topic-page-header">
         <h1>{topic}</h1>
         <Image
-          className="topic-page-image"
+          className="topic-page-image lazyload"
           fluid={topicInfo.image.childImageSharp.fluid}
           alt={topicInfo.name}
         />{" "}
