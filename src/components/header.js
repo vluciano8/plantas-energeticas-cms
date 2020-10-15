@@ -44,11 +44,14 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
 
         <nav id="nav">
           <ul>
-            {data.allTopicsJson.edges.map(({ node }) => (
+          {  /* {data.allTopicsJson.edges.map(({ node }) => (
               <li key={node.slug}>
                 <Link to={`/${node.slug}`}>{node.name}</Link>
               </li>
-            ))}
+            ))} */}
+            <li>
+              <Link to="/blog">Blog</Link>
+            </li>
             <li>
               <Link to="/about">Nosotros</Link>
             </li>

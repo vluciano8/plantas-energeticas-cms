@@ -580,6 +580,7 @@ footer {
 }
 
 .article-date {
+	vertical-align: center;
 	font-size: 14px;
 	line-height: 22px;
 	margin-top: 7px;
@@ -734,4 +735,7 @@ footer {
 }
 .icon-fix {
 	transform: translateY(1px);
+}
+.react-icons {
+	vertical-align: text-bottom;
 }

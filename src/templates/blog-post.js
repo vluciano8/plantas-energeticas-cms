@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Image from "gatsby-image"
 import SEO from "../components/seo"
 import Card from "../components/card"
+import {FiCalendar} from 'react-icons/fi'
 
 class ArticleTemplate extends Component {
   render() {
@@ -31,7 +32,7 @@ class ArticleTemplate extends Component {
         <div id="article">
           <header>
             <h1 className="article-title">{post.frontmatter.title}</h1>
-            <p className="article-date"><i className="far fa-calendar"></i>{' '}{post.frontmatter.date}</p>
+            <span className="article-date"><FiCalendar value={{ className: 'react-icons' }}/>{' '}{post.frontmatter.date}</span>            
             <div className="article-tags">
               {post.frontmatter.tags.map(tag => (
                 <Link
