@@ -11,8 +11,7 @@ module.exports = {
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-catch-links`,
-    `gatsby-plugin-preact`,
-    `gatsby-plugin-netlify`,    
+    
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -89,8 +88,10 @@ module.exports = {
         // ignore: ['/ignored.css', 'prismjs/', 'docsearch.js/'], // Ignore files/folders
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
-    }
-   
+    },
+
+    `gatsby-plugin-preact`,
+    `gatsby-plugin-netlify`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
