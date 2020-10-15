@@ -62,6 +62,7 @@ module.exports = {
         icon: `static/favicon.ico`,
       },
     },
+    `gatsby-plugin-preact`
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

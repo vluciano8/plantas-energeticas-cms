@@ -588,6 +588,7 @@ footer {
 	line-height: 22px;
 	margin-top: 7px;
 	color: #515a5a;
+	font-weight: bold;
 }
 .article-tags {
 	display: flex;

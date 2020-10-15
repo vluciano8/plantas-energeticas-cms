@@ -31,7 +31,7 @@ class ArticleTemplate extends Component {
         <div id="article">
           <header>
             <h1 className="article-title">{post.frontmatter.title}</h1>
-            <p className="article-date"><i className="far fa-calendar">{' '}{post.frontmatter.date}</i></p>
+            <p className="article-date"><i className="far fa-calendar"></i>{' '}{post.frontmatter.date}</p>
             <div className="article-tags">
               {post.frontmatter.tags.map(tag => (
                 <Link
