@@ -1,4 +1,4 @@
-import {  useStaticQuery, graphql, navigate } from "gatsby"
+import {  navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -7,7 +7,7 @@ import { MdClose } from "react-icons/md"
 import { IoIosSearch } from "react-icons/io"
 
 const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
-  const data = useStaticQuery(graphql`
+/*   const data = useStaticQuery(graphql`
     {
       allTopicsJson {
         edges {
@@ -18,7 +18,7 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
         }
       }
     }
-  `)
+  `) */
 
   return (
     <header id="header">
@@ -81,11 +81,14 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
       {menuOpen && (
         <div id="menu">
           <ul>
-            {data.allTopicsJson.edges.map(({ node }) => (
+            {/* {data.allTopicsJson.edges.map(({ node }) => (
               <li key={node.slug}>
                 <a href={`/${node.slug}`}>{node.name}</a>
               </li>
-            ))}
+            ))} */}
+            <li>
+              <a href="/blog">Blog</a>
+            </li>
             <li>
               <a href="/about">Nosotros</a>
             </li>
