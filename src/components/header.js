@@ -1,4 +1,4 @@
-import {  navigate } from "gatsby"
+import {  Link, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -50,10 +50,10 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
               </li>
             ))} */}
             <li>
-              <a href="/blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="/about">Nosotros</a>
+              <Link to="/about">Nosotros</Link>
             </li>
           </ul>
           <div id="search-box">
@@ -87,10 +87,10 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
               </li>
             ))} */}
             <li>
-              <a href="/blog">Blog</a>
+              <Link to="/blog">Blog</Link>
             </li>
             <li>
-              <a href="/about">Nosotros</a>
+              <Link to="/about">Nosotros</Link>
             </li>
           </ul>
         </div>
