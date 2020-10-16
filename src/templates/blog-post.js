@@ -5,14 +5,23 @@ import Image from "gatsby-image"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import { FaRegCalendar,FaFacebookF, FaTwitter, FaGoogle, FaLinkedinIn} from 'react-icons/fa'
+import {DiscussionEmbed} from 'disqus-react'
 
 
 class ArticleTemplate extends Component {
   render() {
     const { data, pageContext } = this.props
     const { topic } = pageContext
-    const baseUrl = 'https://plantas-energeticas.netlify.app/'
     const post = data.markdownRemark
+    const baseUrl = 'https://plantas-energeticas.netlify.app/'
+    const disqusShortname = 'plantas-energeticas'
+    const disqusConfig = {
+      identifier: data.markdownRemark.id,
+      title: post.title,
+      url: baseUrl + pageContext.slug
+    }
+
+    
 
     const similarPosts = data.allMarkdownRemark.edges
       .filter(item => {
@@ -94,6 +103,8 @@ class ArticleTemplate extends Component {
         </li>
           </ul>
           </div>
+          {/* Disqus */}
+          <DiscussionEmbed shortname={disqusShortname} config={disqusConfig}  />
           <div>
             {similarPosts.length > 0 && (
               <h3 id="similar-posts-header">
