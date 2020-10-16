@@ -42,8 +42,8 @@ return  (
     <div className="sidebar">
     {/* <h2 className="sidebar-header">Suscribete</h2> */}
     <div className="sidebar-emails">
-      <h2>Newsletter</h2>
-      {/* <p>Recibe nuestras novedades</p> */}
+      <h2>Suscribete</h2>
+      <p>a nuestro newsletter mensual</p> 
       <form>
         <input type="text" id="email" aria-label="email" />
         <input

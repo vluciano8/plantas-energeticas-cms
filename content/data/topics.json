@@ -1,22 +1,22 @@
 [
   {
     "name": "Energia",
-    "slug": "energia",
-    "image": "../../static/images/catEnergia-logo.png"
+    "slug": "energia"
+    
   },
   {
     "name": "Iluminacion",
-    "slug": "iluminacion",
-    "image": "../../static/images/catIluminacion-logo.png"
+    "slug": "iluminacion"
+   
   },
   {
     "name": "Interior",
-    "slug": "interior",
-    "image": "../../static/images/catInterior-logo.png"
+    "slug": "interior"
+    
   },
   {
     "name": "Exterior",
-    "slug": "exterior",
-    "image": "../../static/images/catExterior-logo.png"
+    "slug": "exterior"
+   
   }
 ]

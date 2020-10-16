@@ -82,7 +82,7 @@ const IndexPage = props => {
           <Sidebar />
         </div>
         <Link to="/blog" id="archive-link">
-          Mas Entradas
+          Todas las entradas
           <FaAngleDoubleRight className="icon-right" />
         </Link>{" "}
         <br />

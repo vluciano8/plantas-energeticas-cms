@@ -394,13 +394,13 @@ body {
 .sidebar-emails h2 {
 	font-size: 26px;
 	line-height: 39px;
-	color: #4d4d4d;
+	color: #7dcea0;
 	margin-bottom: 22px;
 }
 .sidebar-emails p {
 	font-size: 14px;
 	line-height: 21px;
-	color: #686868;
+	color: gray;
 	margin-bottom: 21px;
 }
 .sidebar-emails input[type="text"] {
@@ -613,6 +613,7 @@ footer {
 }
 #similar-posts-header {
 	margin-bottom: 25px;
+	color: #515a5a;
 }
 
 /* Topics Page Styles */
@@ -624,6 +625,8 @@ footer {
 }
 .topic-page-header h1 {
 	margin-right: 24px;
+	font-family: 'Gochi Hand', cursive;
+	color: gray;
 }
 .topic-page-image {
 	width: 90px;
@@ -738,4 +741,46 @@ footer {
 }
 .react-icons {
 	vertical-align: text-bottom;
+}
+
+/* Share Social Icons */
+.share-title {
+	color: #7dcea0;
+	text-align: center;
+}
+.social-share-links {
+	text-align: center;
+}
+.share-icons-background {
+	height: 40px;
+	width: 40px;
+	background-color: #7dcea0;
+	padding: 10px;
+	border-radius: 50px;
+}
+.share-icons-background:hover {
+	height: 40px;
+	width: 40px;
+	background-color: #abebc6;
+	padding: 10px;
+	border-radius: 50px;
+}
+.social-share-links ul {
+	display: inline-flex;
+	align-items: center;
+	margin: 20px auto;
+}
+
+.social-share-links li {
+	margin: auto 10px;
+	list-style: none;
+}
+.social-share-links a {
+	opacity: 0.6;
+	transition: all 0.1s ease-in;
+	color: #fdfefe;
+}
+.social-share-links a:hover {
+	opacity: 1;
+	color: #fdfefe;
 }

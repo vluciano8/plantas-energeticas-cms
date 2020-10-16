@@ -1,7 +1,7 @@
 import React from "react"
 
 import { graphql, useStaticQuery } from "gatsby"
-import Image from "gatsby-image"
+//import Image from "gatsby-image"
 import Card from "../components/card"
 import Sidebar from '../components/sidebar'
 import Layout from "../components/layout"
@@ -45,13 +45,6 @@ const TopicPageTemplate = ({ pageContext }) => {
           node {
             name
             slug
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, maxHeight: 240) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
           }
         }
       }
@@ -64,19 +57,19 @@ const TopicPageTemplate = ({ pageContext }) => {
     return node.frontmatter.tags.includes(topic)
   })
 
-  const topicInfo = data.allTopicsJson.edges.filter(({ node }) => {
+ /*  const topicInfo = data.allTopicsJson.edges.filter(({ node }) => {
     return node.slug === topic.toLowerCase().replace(" ", "-")
-  })[0].node
+  })[0].node */
 
   return (
     <Layout pageType="Topic">
       <div className="topic-page-header">
         <h1>{topic}</h1>
-        <Image
+        {/*  <Image
           className="topic-page-image lazyload"
           fluid={topicInfo.image.childImageSharp.fluid}
           alt={topicInfo.name}
-        />{" "}
+        /> */}{" "} 
       </div>
       <div className="flex-layout">
         <div className="cards">
