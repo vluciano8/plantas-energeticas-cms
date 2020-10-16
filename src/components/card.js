@@ -6,7 +6,8 @@ const Card = ({ frontmatter, slug }) => {
   return (
     <figure className="card-styles">
       <Link to={slug}>
-        <Image
+        <Image 
+          fadeIn="false"
           className="card-image lazyload"
           fluid={frontmatter.featuredImage.childImageSharp.fluid}
         />

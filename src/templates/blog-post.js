@@ -51,6 +51,7 @@ class ArticleTemplate extends Component {
             </div>
             <Image
             className="article-image lazyload"
+            fadeIn="false"
               fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
             ></Image>
           </header>

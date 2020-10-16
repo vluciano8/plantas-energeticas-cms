@@ -5,6 +5,7 @@ module.exports = {
     author: `@boostcode`,
   },
   plugins: [
+    `gatsby-plugin-preact`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
@@ -81,7 +82,7 @@ module.exports = {
     },
     
 
-    `gatsby-plugin-preact`,
+    
     `gatsby-plugin-netlify`,
 
     // this (optional) plugin enables Progressive Web App + Offline functionality

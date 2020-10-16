@@ -1,4 +1,4 @@
-import { Link, useStaticQuery, graphql, navigate } from "gatsby"
+import {  useStaticQuery, graphql, navigate } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 
@@ -31,15 +31,15 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
             }
           }}
         >
-          <Link
-            to="/"
+          <a
+            href="/"
             id="site-logo"
             style={{
               textDecoration: `none`,
             }}
           >
             {siteTitle}
-          </Link>
+          </a>
         </button>
 
         <nav id="nav">
@@ -50,10 +50,10 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
               </li>
             ))} */}
             <li>
-              <Link to="/blog">Blog</Link>
+              <a href="/blog">Blog</a>
             </li>
             <li>
-              <Link to="/about">Nosotros</Link>
+              <a href="/about">Nosotros</a>
             </li>
           </ul>
           <div id="search-box">
@@ -83,11 +83,11 @@ const Header = ({ siteTitle, menuOpen, setMenuOpen }) => {
           <ul>
             {data.allTopicsJson.edges.map(({ node }) => (
               <li key={node.slug}>
-                <Link to={`/${node.slug}`}>{node.name}</Link>
+                <a href={`/${node.slug}`}>{node.name}</a>
               </li>
             ))}
             <li>
-              <Link to="/about">Nosotros</Link>
+              <a href="/about">Nosotros</a>
             </li>
           </ul>
         </div>

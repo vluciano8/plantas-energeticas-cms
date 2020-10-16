@@ -28,6 +28,7 @@
     "gatsby-transformer-sharp": "^2.5.3",
     "netlify-cms-app": "^2.12.14",
     "preact": "^10.5.4",
+    "preact-render-to-string": "^5.1.10",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
