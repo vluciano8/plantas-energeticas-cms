@@ -1,6 +1,5 @@
 const path = require(`path`)
 const _ = require("lodash")
-const {paginate} = require ('gatsby-awesome-pagination');
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { fmImagesToRelative } = require("gatsby-remark-relative-images")
 
@@ -18,6 +17,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
   }
 }
+
+
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions

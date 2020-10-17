@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Card from "../components/card"
 import Sidebar from '../components/sidebar'
-import Featured from "../components/featured"
+//import Featured from "../components/featured"
 import Search from "../components/search"
 
 const IndexPage = props => {
@@ -59,7 +59,7 @@ const IndexPage = props => {
     return (
       <Layout>
         <SEO title="Home" slug="/" />
-        <Featured markdown={data.allMarkdownRemark} />
+         {/* <Featured markdown={data.allMarkdownRemark} /> */}
         <div className="flex-layout">
           <div className="cards">
             <h2 id="articles-title">Articulos</h2>

@@ -13,6 +13,7 @@ class ArticleTemplate extends Component {
     const { data, pageContext } = this.props
     const { topic } = pageContext
     const post = data.markdownRemark
+   
     const baseUrl = 'https://plantas-energeticas.netlify.app/'
     const disqusShortname = 'plantas-energeticas'
     const disqusConfig = {
@@ -43,7 +44,8 @@ class ArticleTemplate extends Component {
         <div id="article">
           <header>
             <h1 className="article-title">{post.frontmatter.title}</h1>
-            <span className="article-date"><FaRegCalendar value={{ className: 'react-icons' }}/>{' '}{post.frontmatter.date}</span>            
+            <span className="article-date"><FaRegCalendar value={{ className: 'react-icons' }}/>{' '}{post.frontmatter.date}</span>
+            {/* <span className="article-date"><FaRegCalendar value={{ className: 'react-icons' }}/>{' '}{similarPosts.node.fields.readingTime.text}</span>  */  }         
             <div className="article-tags">
               {post.frontmatter.tags.map(tag => (
                 <Link
