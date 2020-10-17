@@ -62,7 +62,7 @@ const IndexPage = props => {
          {/* <Featured markdown={data.allMarkdownRemark} /> */}
         <div className="flex-layout">
           <div className="cards">
-            <h2 id="articles-title">Articulos</h2>
+            <h2 id="articles-title">Ultimas Entradas</h2>
             {data.allMarkdownRemark.edges.map(({ node }, index) => {
               if (index < 0) {
                 return null
@@ -79,7 +79,7 @@ const IndexPage = props => {
             
           </div>
 
-          <Sidebar />
+          <Sidebar className="index-sidebar" />
         </div>
         <Link to="/blog" id="archive-link">
           Todas las entradas

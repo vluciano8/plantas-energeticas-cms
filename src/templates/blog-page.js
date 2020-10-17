@@ -12,7 +12,7 @@ function BlogPageTemplate({ data, pageContext }) {
 
   return (
     <Layout pageType="Blog">
-      <h2 className="page-header">Listado Entradas {currentPage}</h2>
+      {/* <h2 className="page-header">Listado Entradas {currentPage}</h2> */}
       <div className="flex-layout">
         <div className="cards">
           <h2 id="articles-title">Entradas</h2>
