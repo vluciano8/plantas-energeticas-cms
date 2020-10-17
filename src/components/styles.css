@@ -104,7 +104,7 @@ body {
 }
 #site-logo {
 	font-size: 2rem;
-	font-family: 'Gochi Hand', cursive;
+	/* font-family: 'Gochi Hand', cursive; */
 	font-weight: 700;
 	color: #7dcea0;
 }
@@ -627,7 +627,7 @@ footer {
 }
 .topic-page-header h1 {
 	margin-right: 24px;
-	font-family: 'Gochi Hand', cursive;
+	/* font-family: 'Gochi Hand', cursive; */
 	color: gray;
 }
 .topic-page-image {

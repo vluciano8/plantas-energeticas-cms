@@ -21,10 +21,7 @@ module.exports = {
             family: `Montserrat`,
             variants: [`400`]
           },
-          {
-            family: `Gochi Hand`,
-            variants: [`400`]
-          },
+          
         ],
       },
     },
