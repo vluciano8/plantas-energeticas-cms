@@ -57,6 +57,12 @@ module.exports = {
             resolve: `gatsby-remark-relative-images`,
           },
           {
+            resolve: `gatsby-remark-images-native-lazy-load`,
+            options: {
+                loading: "lazy" // "lazy" | "eager" | "auto"
+                }
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,

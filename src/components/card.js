@@ -8,6 +8,7 @@ const Card = ({ frontmatter, slug }) => {
       <Link to={slug}>
         <Image 
           className="card-image lazyload"
+          loading="lazy"
           fluid={frontmatter.featuredImage.childImageSharp.fluid}
         />
       </Link>
